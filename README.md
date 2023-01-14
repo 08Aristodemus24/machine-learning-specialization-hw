@@ -50,7 +50,7 @@ with those filenames that you will have to complete, thus testing your written f
 
 
 % this is a comment
-disp(sprintf("<some string> %0.2f %0.6this means 2 decimal plaecs"
+disp(sprintf("<some string> %0.2f %0.6this means 2 decimal plaecs")
 pi is a constant 3.14
 
 when you don;'t want to print a line through the console put a semi colopn at the end of that line
@@ -90,6 +90,11 @@ or <matrix C> = [<matrix A>, <matrix B>];
 <matrix or vector> * <scalar> = matrix or vecotr
 <matrix or vector> .* <matrix or vector> = <matrix of the same dimensionality>; % this is because element wise multiplication just uses an element of matrix A and multiplies it to the element with teh same index in matrix B
 
+1 ./ <matrix or vector = <matrix or vecotr of same dimensinality>; % this is element wise division of scalar precedes the matrix first in the operation
+
+log(<matrix or vector>) = <natural log of the matrix or vector by getting natural log of each value in matrix or vector>
+exp(<natrix ir vector) = <multiply the matrix or vector values to the natural number e>
+abs(<matrix or vector) = <matrix or vector of same dimensionality> % takes the absolute value of each value in each matrix or vector
 
 
 

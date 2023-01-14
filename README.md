@@ -96,6 +96,8 @@ log(<matrix or vector>) = <natural log of the matrix or vector by getting natura
 exp(<natrix ir vector) = <multiply the matrix or vector values to the natural number e>
 abs(<matrix or vector) = <matrix or vector of same dimensionality> % takes the absolute value of each value in each matrix or vector
 
+<vector> * <vector>' = <scalar> % this operation produces the sum of squares of each value in the vector or matrix
+<vector matrix> .* <vector or matrix> = <vector or matrix of same dimensionality> % this is usually good when squaring the elements of vector or matrix
 
 
 sz = size(<matrix or vector>, <if value is 1 then return the number of rows of the matrix or vector if 2 then columns>) % sz is actually also a vector of size 

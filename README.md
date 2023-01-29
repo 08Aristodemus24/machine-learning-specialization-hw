@@ -90,10 +90,12 @@ or <matrix C> = [<matrix A>, <matrix B>];
 <matrix or vector> * <scalar> = matrix or vecotr
 <matrix or vector> .* <matrix or vector> = <matrix of the same dimensionality>; % this is because element wise multiplication just uses an element of matrix A and multiplies it to the element with teh same index in matrix B
 
-1 ./ <matrix or vector = <matrix or vecotr of same dimensinality>; % this is element wise division of scalar precedes the matrix first in the operation
+<scalar> ./ <matrix or vector = <matrix or vecotr of same dimensinality>; % this is element wise division of scalar precedes the matrix first in the operation
+note that when using a scalar in an operation that precedes a vector or matrix you should
+always use an element wise operation such as .*, ./, .^, excluding +, - operations
 
 log(<matrix or vector>) = <natural log of the matrix or vector by getting natural log of each value in matrix or vector>
-exp(<natrix ir vector) = <multiply the matrix or vector values to the natural number e>
+exp(<natrix ir vector) = <raise the the matrix or vector values to the natural number e>
 abs(<matrix or vector) = <matrix or vector of same dimensionality> % takes the absolute value of each value in each matrix or vector
 
 <vector> * <vector>' = <scalar> % this operation produces the sum of squares of each value in the vector or matrix
@@ -106,6 +108,11 @@ rows and number of columsn respectively of the matrix or number of
 elements if a vector 
 
 length(<matrix or vector>) % returns the largest dimension of the matrix or vector
+
+
+raising eulers number to a vector or matrix of values cannot be done in matlab so how to implement sigmoid?
+
+
 
 
 loading data

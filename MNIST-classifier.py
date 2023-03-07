@@ -1,12 +1,12 @@
 import numpy as np
-from tensorflow import keras as tk
+import tensorflow as tf
 
 # 2 x m
 X = np.array([[200.0, 18.0]])
 
 # 3 x m
 # sets up the number of nodes for the 1st layer
-layer_1 = tk.layers.Dense(units=3, activation="sigmoid")
+layer_1 = tf.keras.layers.Dense(units=3, activation="sigmoid")
 
 # The Dense class actually has a self.call() method,
 # which allows the instantiation of a class to be used as a function
@@ -14,8 +14,10 @@ layer_1 = tk.layers.Dense(units=3, activation="sigmoid")
 A1 = layer_1(X)
 
 # 1 x m
-layer_2 = tk.layers.Dense(units=1, activation="sigmoid")
+layer_2 = tf.keras.layers.Dense(units=1, activation="sigmoid")
 A2 = layer_2(A1)
+
+model = tf.keras.Model()
 
 
 # X is a 4 x 2 matrix, but can it be reshaped 
@@ -28,9 +30,9 @@ X = np.array([[200.0, 17.0],
 
 # can Y be a 1 x m row vector rather than a 1D vector?
 Y = np.array([1, 0, 0, 1])
-layer_1 = tk.layers.Dense(units=3, activation="sigmoid")
-layer_2 = tk.layers.Dense(units=1, activation="sigmoid")
-model = tk.layers.Sequential([layer_1, layer_2])
+layer_1 = tf.keras.layers.Dense(units=3, activation="sigmoid")
+layer_2 = tf.keras.layers.Dense(units=1, activation="sigmoid")
+model = tf.keras.Sequential([layer_1, layer_2])
 
 # compiles and builds the simple neural network model
 model.compile()

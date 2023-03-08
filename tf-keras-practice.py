@@ -56,6 +56,5 @@ model.compile(optimizer='Adam', loss='mse')
 
 # final phase is feeding input and output data to the compiled/built model
 model.fit(X, Y, epochs=50)
-
 model.summary()
 

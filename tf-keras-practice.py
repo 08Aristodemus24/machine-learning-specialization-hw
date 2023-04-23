@@ -10,6 +10,7 @@ Original file is located at
 import tensorflow as tf
 from tensorflow.keras.layers import Dense
 from tensorflow.keras import Model, Input, Sequential
+# from tensorflow.keras.
 import numpy as np
 
 # X_train dataset with 10 features and 5000 examples
@@ -58,3 +59,19 @@ model.compile(optimizer='Adam', loss='mse')
 model.fit(X, Y, epochs=50)
 model.summary()
 
+
+# unregularized model
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(units=25, activation="relu"),
+    tf.keras.layers.Dense(units=15, activation="relu"),
+    tf.keras.layers.Dense(units=1, activation="sigmoid"),
+], name='25-15-1-NN_architecture')
+
+model.compile(optimizer='Adam', loss='binary_cross_entropy')
+
+# regularized model
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(units=25, activation="relu", kernel_regularizer=L2(0.01)),
+    tf.keras.layers.Dense(units=15, activation="relu", kernel_regularizer=L2(0.01)),
+    tf.keras.layers.Dense(units=1, activation="sigmoid", kernel_regularizer=L2(0.01)),
+], name='25-15-1-NN_architecture')

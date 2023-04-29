@@ -46,7 +46,8 @@ note always be in directory of exercise folder in matlab drive
 3. exn.mlx will contain the code sections which call the functions inside those files
 with those filenames that you will have to complete, thus testing your written function
 4. those sections can be run by the click path live editor > run section
-4. once a section or the whole exercise is done type the submit command in the command line
+5. once a section or the whole exercise is done type the submit command in the command line
+6. to run a .m file type the filename without the .m extension in the command window if in octave
 
 
 % this is a comment

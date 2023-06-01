@@ -70,6 +70,11 @@ model = tf.keras.Sequential([
 model.compile(optimizer='Adam', loss='binary_cross_entropy')
 
 # regularized model
+
+# if you're question before was why regularize each layer when we only regularize the cost function once
+# it is because if you recall we have different derivatives of the cost function in each layer and have different
+# therefore coefficient matrices in each layer that's why we can manipulate what lambda is for each layer
+# and not just for all layers
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(units=25, activation="relu", kernel_regularizer=L2(0.01)),
     tf.keras.layers.Dense(units=15, activation="relu", kernel_regularizer=L2(0.01)),
